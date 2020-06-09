@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using System.Security.Cryptography;
 
-namespace n3
+namespace Task3
 {
     class Program
     {
@@ -20,8 +19,8 @@ namespace n3
                 int userMove = Menu(args, hash);
                 Console.WriteLine("Computer move: {0}", args[computerMove]);
                 Refereeing(args.Length, userMove, computerMove);
-                string str_key = String.Join("", BitConverter.ToString(key).Split('-'));
-                Console.WriteLine("HMAC key: {0}", str_key);
+                string tempKey = String.Join("", BitConverter.ToString(key).Split('-'));
+                Console.WriteLine("HMAC key: {0}", tempKey);
             }
             else Console.WriteLine("Invalid arguments!");
         }
